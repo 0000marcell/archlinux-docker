@@ -2,17 +2,25 @@
 
 # Utilities
 pacman -Sy
-pacman -S --noconfirm git neovim ranger python python-pip
+pacman -S --noconfirm git neovim ranger python python-pip openssh
 pip install percol
 
 # NVM
 touch ~/.bashrc
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+echo "ln -s /root/docker-volume/.ssh /root/.ssh 2> /dev/null" >> ~/.bashrc
 source ~/.bashrc
-nvm install 10.16.3
+nvm install 12.13.1
+
+# Git flow
+curl -OL https://raw.github.com/nvie/gitflow/develop/contrib/gitflow-installer.sh
+chmod +x gitflow-installer.sh
+./gitflow-installer.sh
 
 # General
 mkdir ~/scripts
-mkdir ~/projects
+mkdir ~/docker-volume/projects
 echo 'export PS1="\[\e[32m\]\u\[\e[m\]\[\e[32m\]\\$\[\e[m\]\[\e[32m\]\W\[\e[m\] "' >> ~/.bashrc
 curl -L https://raw.githubusercontent.com/0000marcell/scripts/master/install-scripts.sh | bash
+
+
