@@ -2,13 +2,14 @@
 
 # Utilities
 pacman -Sy
-pacman -S --noconfirm git neovim ranger python python-pip openssh
+pacman -S --noconfirm git neovim ranger python python-pip openssh vim
 pip install percol
 
 # NVM
 touch ~/.bashrc
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 echo "ln -s /root/docker-volume/.ssh /root/.ssh 2> /dev/null" >> ~/.bashrc
+echo "source /root/docker-volume/.env" >> ~/.bashrc
 source ~/.bashrc
 nvm install 12.13.1
 
