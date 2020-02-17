@@ -15,6 +15,9 @@ echo "source /root/docker-volume/.env" >> ~/.bashrc
 source ~/.bashrc
 nvm install 12.13.1
 
+# node install
+npm i -g figma2css figmafind figmafetch findinjson
+
 # Git flow
 curl -OL https://raw.github.com/nvie/gitflow/develop/contrib/gitflow-installer.sh
 chmod +x gitflow-installer.sh
