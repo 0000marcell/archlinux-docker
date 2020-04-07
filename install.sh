@@ -9,7 +9,8 @@ pip install percol
 touch ~/.bashrc
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 echo "cd /root/docker-volume/projects" >> ~/.bashrc
-echo "ln -s /root/docker-volume/.ssh /root/.ssh 2> /dev/null" >> ~/.bashrc
+echo "cp -s /root/docker-volume/.ssh /root/.ssh" >> ~/.bashrc
+echo "chmod 600 /root/.ssh/id_rsa" >> ~/.bashrc
 echo "source /root/docker-volume/.env" >> ~/.bashrc
 
 source ~/.bashrc
